@@ -6,6 +6,7 @@ function getRepositories(){
 }
 
 function showRepositories(event, data) {
-  const repos = JSON.parse (this.respponseText);
-  
+  const repos = JSON.parse(this.responseText);
+  const repoList = `<ul>${repos.map ( r => '<li>' + r.name + '</li>' ).join('')}</ul>`;
+  document.getElementById('repositories').innerHTML = repoList;
 }
