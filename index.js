@@ -10,6 +10,6 @@ function showRepositories(event, data) {
   const repos = JSON.parse(this.responseText);
   //We're simply building an 'unordered list' by using '.map' to create <li></li> nodes for each object in repos.
   const repoList = `<ul>${repos.map ( r => '<li>' + r.name + '</li>' ).join('')}</ul>`;
-  // and now we shoul call the 
+  // and now we shoul call the repositories we have created in the previous lines called as 'repoList !'
   document.getElementById('repositories').innerHTML = repoList;
 }
