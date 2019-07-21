@@ -1,4 +1,4 @@
 function getRepositories(){
   const req = new XMLHttpRequest();
-  req.addEventListener('')
+  req.addEventListener('load', showRepositories);
 }
